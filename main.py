@@ -1533,15 +1533,235 @@ for i in range(ELEMENTS):
 for i in range(ELEMENTS):
     print(newArr[i])
  """
+""" 
+#create lists a and b
+a = [5,10,9,6,7,-6,13,12,11,2]
+b = [-11,25,4,45,67,87,34,23,33,55,13,15,-4,-2,22]
 
+#create list newArr
+newArr = [None] * (len(a) + len(b))
+for i in range(len(a)):
+    newArr[i] = a[i]
+for i in range(len(b)):
+    newArr[len(a) + i] = b[i]
+#display list newArr
+for i in range(len(newArr)):
+    print(newArr[i], end = "\t")
 
-print("123")
+ """
+""" 
+#create lists a and b
+a = [5,10,9,6,7,-6,13,12,11,2]
+b = [-11,25,4,45,67,87,34,23,33,55,13,15,-4,-2,22]
 
+#create list newArr
+newArr = []
+for element in a:
+    newArr.append(element)
+for element in b:
+    newArr.append(element)
 
+#display list newArr
+for i in range(len(newArr)):
+    print(newArr[i], end ="\t")
+ """
+""" 
+#create lists a and b
+a = [5,10,9,6,7,-6,13,12,11,2]
+b = [-11,25,4,45,67,87,34,23,33,55,13,15,-4,-2,22]
 
+#create list newArr
+newArr = a + b
 
+#display list newArr
+for i in range(len(newArr)):
+    print(newArr[i], end ="\t")
 
+ """
 
+""" 
 
-   
+ELEMENTS = 5
+
+ar = [None] * ELEMENTS
+for i in range(ELEMENTS):
+    ar[i] = float(input()) #add data
+
+#create lists pos and neg
+posIndex = 0
+negIndex = 0
+pos = [None] * ELEMENTS
+neg = [None] * ELEMENTS
+for i in range(ELEMENTS):
+    if ar[i] > 0:
+        pos[posIndex] = ar[i]
+        posIndex += 1
+    elif ar[i] < 0:
+        neg[negIndex] = ar[i]
+        negIndex += 1
+
+for i in range(posIndex):
+    print(pos[i], end = "\t")
+
+print()
+
+for i in range(negIndex):
+    print(neg[i], end = "\t")
+ """
+""" 
+#this appproach uses least amount of RAM
+ELEMENTS = 5
       
+ar = []
+for i in range(ELEMENTS):
+    ar.append(float(input()))
+
+#create lists pos and neg
+pos =[]
+neg =[]
+for element in ar:
+    if element > 0:
+        pos.append(element)
+    elif element < 0:
+        neg.append(element)
+
+for element in pos:
+    print(element, end="\t")
+
+print()
+
+for element in neg:
+    print(element, end="\t")
+      """
+""" 
+ELEMENTS = 5
+a = [None] * ELEMENTS
+for i in range(ELEMENTS):
+    a[i] = int(input())
+
+k = 0
+b = [None] * ELEMENTS
+for i in range(ELEMENTS):
+    lastDigit = a[i] % 10
+    firstDigit = a[i] // 10
+
+    if firstDigit == 5 or lastDigit == 5:
+        b[k] = a[i]
+        k += 1
+
+for i in range(k):
+    print(b[i], end ="\t") 
+    """
+""" 
+ELEMENTS = 5
+
+odds = [None] * ELEMENTS
+for i in range(ELEMENTS):
+    x = int(input("ENter an odd positive integer: "))
+    odds[i] = x
+
+#display elements backwards
+for i in range(ELEMENTS -1, -1, -1):
+    print(odds[i], end ="\t")
+
+while True:
+    x = float(input("Enter integer: "))
+    if x > 0 and x == int(x) and x % 2 != 0: break
+odds[i] = int(x)
+ """
+""" 
+ELEMENTS = 5
+odds = [None] * ELEMENTS
+for i in range(ELEMENTS):
+    while True:
+        x = float(input("Enter an odd positive integer: "))
+        if x > 0 and x == int(x) and x % 2 != 0: break
+    odds[i] = int(x)
+for i in range(ELEMENTS -1, -1, -1):
+    print(odds[i], end ="\t")
+
+ """
+""" 
+ELEMENTS = 20
+
+odds = [None] * ELEMENTS
+for i in range(ELEMENTS):
+    while True:
+        x = 0
+        failure = False
+        if x <= 0:
+            print("invalid value: Non positive entered")
+            failure = True
+        elif x != int(x):
+            print("Invalid value: Float entered")
+            failure = True
+        elif x % 2 == 0:
+            print("Invalid value: Even entered!")
+        
+        if not failure:break
+    odds[i] = int(x)
+ """
+""" 
+
+LAKES = 5
+depths = [None] * LAKES
+for i in range(LAKES):
+    depths[i] = float(input())
+
+maximum = depths[0] #initial value
+
+for i in range(1, LAKES):
+    if depths[i] > maximum:
+        maximum = depths[i]
+
+print(maximum)
+ """
+""" 
+LAKES = 5
+
+depths = []
+for i in range(LAKES):
+    depths.append(float(input()))
+
+max = max(depths)
+print(max) 
+"""
+""" 
+LAKES = 5
+names = [None] * LAKES
+depths = [None] * LAKES
+for i in range(LAKES):
+    names[i] = input()
+    depths[i] = float(input())
+
+maximum = depths[0]
+myName = names[0]
+for i in range(1, LAKES):
+    if depths[i]> maximum:
+        maximum = depths[i]
+        myName = names[i]
+
+print(myName)
+ """
+""" 
+LAKES = 5
+names = [None]
+depths = [None] * LAKES
+countries = [None] * LAKES
+areas = [None] * LAKES
+for i in range(LAKES):
+    names[i] = input()
+    depths[i] = float(input())
+    countries[i] = input()
+    areas[i] = float(input())
+
+maximum = depths[0]
+indexOfMax = 0
+for i in range(1, LAKES):
+    if depths[i] > maximum:
+        maximum = depths[i]
+        indexOfMax = i
+print(depths[indexOfMax], names[indexOfMax], end = "\t")
+print(countries[indexOfMax], areas[indexOfMax])
+ """
+
