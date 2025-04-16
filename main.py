@@ -1764,4 +1764,488 @@ for i in range(1, LAKES):
 print(depths[indexOfMax], names[indexOfMax], end = "\t")
 print(countries[indexOfMax], areas[indexOfMax])
  """
+""" 
+STUDENTS = 5
+names = [None] * STUDENTS
+grades = [None] * STUDENTS
+for i in range(STUDENTS):
+    names[i] = input("Enter name for student No" + str(i + 1)+ ":")
+    while names[i] =="":
+        print("Error! Name cannot be empty!")
+        names[i] = input("Enter name for student No"+ str(i + 1) +":")
+
+        #prmpt user to enter a grade and validate it
+        grades[i] = int(input("Enter their grade: "))
+        while grades[i] < 0 or grades[i] > 100:
+            print("Invalid value")
+            grades[i] = int(input("Enter their grade: "))
+
+#find the greatest grade
+maximum = grades[0]
+for i in range(1, STUDENTS):
+    if grades[i] > maximum:
+        maximum = grades[i]
+
+#displays the names of all those who share the one greatest grade
+print("Following students have got the greatest grade:")
+for i in range(STUDENTS):
+    if grades[i] == maximum:
+        print(names[i]) """
+""" 
+CITIES = 10
+DAYS = 31
+
+#read list t
+t = [[None] * DAYS for i in range(CITIES)]
+for i in range(CITIES):
+    for j in range(DAYS):
+        t[i][j] = int(input())
+
+#find minimum
+minimum = t[0][0]
+for i in range(CITIES):
+    for j in range(DAYS):
+        if t[i][j] < minimum:
+            minimum = t[i][j]
+print(minimum)
+ """
+""" 
+CITIES = 10
+DAYS = 31
+
+t = [[None] * DAYS for i in range(CITIES)]
+for i in range(CITIES):
+    for j in range(DAYS):
+        t[i][j] = int(input())
+
+#find min
+minimum = t[0][0]
+for i in range(CITIES):
+    for j in range(DAYS):
+        if t[i][j] < minimum:
+            minimum = t[i][j]
+
+print(minimum)
+ """
+""" 
+CITIES = 10
+DAYS = 31
+names = [None] * CITIES
+t = [[None] * DAYS for i in range(CITIES)]
+for i in range(CITIES):
+    names[i] = input()
+    for j in range(DAYS):
+        t[i][j] = int(input())
+
+minimum = t[0][0]
+m_i = 0
+m_j = 0
+for i in range(CITIES):
+    for j in range(DAYS):
+        if t[i][j] < minimum:
+            minimum = t[i][j]
+            m_i = i
+            m_j = j
+print("Min temperature: ", minimum)
+print("City", names[m_i])
+print("Day: ", m_j + 1) """
+""" 
+ROWS = 30
+COLUMNS = 20
+
+b = [[None] * COLUMNS for i in range(ROWS)]
+for i in range(ROWS):
+    for j in range(COLUMNS):
+        b[i][j] = float(input())
+
+minimum = [None] * ROWS
+maximum = [None] * ROWS
+for i in range(ROWS):
+    minimum[i] = b[i][0]
+    maximum[i] = b[i][0]
+    for j in range(COLUMNS):
+        if b[i][j] < minimum[i]:
+            minimum[i] = b[i][j]
+        if b[i][j] > maximum[i]:
+            maximum[i] = b[i][j]
+
+for i in range(ROWS):
+    print(minimum[i], maximum[i])
+ """
+
+# --------------------  SORTING LISTS ----------------------
+""" 
+#inner(nested) loop control structure BUBBLE SORT
+ELEMENTS = 4
+a = [None] * ELEMENTS
+for i in range(ELEMENTS):
+    a[i] = float(input(":"))
+
+for m in range(ELEMENTS - 1):
+    for n in range(ELEMENTS -1, m, -1):
+        if a[n] < a[n-1]:
+            a[n], a[n - 1]= a[n-1],a[n]
+
+for i in range(ELEMENTS):
+    print(a[i], end = "\t") 
+    """
+
+
+""" 
+for m in range(ELEMENTS - 1):
+    for n in range(ELEMENTS - 1, m, -1):
+        if a[n] > a[n-1]:
+            a[n], a[n-1] = a[n-1], a[n] """
+""" 
+LAKES = 20
+
+names = [None] * LAKES
+areas = [None] * LAKES
+for i in range(LAKES):
+    names[i] = input()
+    areas[i] = float(input())
+
+for m in range(LAKES - 1):
+    for n in range(LAKES - 1,m,-1):
+        if areas[n] < areas[n - 1]:
+            areas[n], areas[n-1] = areas[n-1], areas[n]
+            names[n], names[n-1] = names[n-1], names[n]
+
+for i in range(LAKES):
+    print(names[i], "\t", areas[i]) 
+    """
+""" 
+PEOPLE = 5
+
+#read lists firstNm and lastNm
+firstNm = [None] * PEOPLE
+lastNm = [None] * PEOPLE
+for i in range(PEOPLE):
+    firstNm[i] = input("Enter name for person No" + str(i + 1) + ":")
+    lastNm[i] = input("Enter last name No" + str(i + 1)+ ":")
+
+#sort lists lastNm and firstNm
+for m in range(PEOPLE - 1):
+    for n in range(PEOPLE - 1, m, -1):
+        if lastNm[n] < lastNm[n-1]:
+            lastNm[n], lastNm[n-1] = lastNm[n-1], lastNm[n]
+            firstNm[n], firstNm[n-1] = firstNm[n-1], firstNm[n]
+        elif lastNm[n] == lastNm[n-1]:
+            if firstNm[n] < firstNm[n-1]:
+                firstNm[n],firstNm[n-1] = firstNm[n-1], firstNm[n]
+for i in range(PEOPLE):
+    print(lastNm[i], "\t", firstNm[i]) """
+""" 
+#sort two-dimensional list using bubble sort
+for j in range(columns):
+    for m in range(rows-1):
+        for n in range(rows-1,m,-1):
+            if a[n][j] < a[n-1][j]:
+                a[n][j], a[n-1][j] = a[n-1][j],a{n}[j] 
+                """
+""" 
+ELEMENTS = 5
+w = [None] * ELEMENTS
+for i in range(ELEMENTS):
+    w[i] = float(input())
+
+for m in range(ELEMENTS - 1):
+    swaps = False
+    for n in range(ELEMENTS - 1, m,-1):
+        if w[n] < w[n-1]:
+            w[n],w[n-1] = w[n-1], w[n]
+            swaps = True
+    if not swaps: break
+
+print("The three heaviest weights are: ")
+print(w[-3],w[-2],w[-1])
+
+print("Three lightest weights are: ")
+print(w[0],w[1],w[2]) 
+"""
+""" 
+months = ["Jan", "Feb", "March", "April", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"]
+kwh = [None] * len(months)
+for i in range(len(months)):
+    kwh[i] = float(input("Enter kWh for " + months[i] + ":"))
+
+for m in range(3): 
+    maximum = kwh[m]
+    indexOfMax = m
+    for n in range(m,len(months)):
+        if kwh[n] > maximum:
+            maximum = kwh[n]
+            indexOfMax = n
+    #swap values of kwh
+    kwh[m],kwh[indexOfMax] = kwh[indexOfMax], kwh[m]
+    #swap values of months
+    months[m], months[indexOfMax] = months[indexOfMax], months[m]
+
+for i in range(3):
+    print(months[i], ":",kwh[i])
+ """
+""" 
+CARS = 2
+LAPS = 3
+#read names and elapsed times all together
+elapsedTImes = [[None] * LAPS for i in range(CARS)]
+names = [None] * CARS
+for i in range(CARS):
+    names[i] = input("Enter name No" + str(i + 1)+ ": ")
+    for j in range(LAPS):
+        elapsedTImes[i][j] = float(input("Enter elapsed time for lap No" + str(j + 1) + ":"))
+        
+#sort list elapsed times
+for i in range(CARS):
+    for m in range(1, LAPS):
+        element= elapsedTImes[i][m]
+        n = m
+        while n > 0 and elapsedTImes[i][n - 1] < element:
+            elapsedTImes[i][n] = elapsedTImes[i][n-1]
+            n -= 1
+        elapsedTImes[i][n] = element
+#display 3 worst elapsed times
+for i in range(CARS):
+    print("Worst elapsed times of", names[i])
+    print("-------------------------------")
+    for j in range(3):
+        print(elapsedTImes[i][j])
+        
+ """
+
+# ------------------- SEARCH ALGOTIHS ----------------------------
+""" 
+neelde = float(input("Enter value to search: "))
+found = False
+for i in range(ELEMENTS):
+    if haystack[i] == neelde:
+        print(needle, "found at position: ", i)
+        found = True
+
+if not found:
+    print("Found nothing") """
+
+""" 
+PEOPLE = 3
+firstNames = [None] * PEOPLE
+lastNames = [None] * PEOPLE
+for i in range(PEOPLE):
+    firstNames[i] = input("Enter first name: ")
+    lastNames[i] = input("Enter last name: ")
+
+#get name to search and covert it to uppercase
+needle = input("Enter a first name to search:").upper()
+
+#search for user-provided value in list firstNames
+found = False
+for i in range(PEOPLE):
+    if firstNames[i].upper() == needle: 
+        print(lastNames[i])
+        found = True
+
+if not found:
+    print("No one found")
+ """
+""" 
+needle = float(input("Enter a value to search: "))
+
+found = False
+for i in range(ELEMENTS):
+    if haystack[i] == needle:
+        print(needle,"found at position:", i)
+        found = True
+        break
+if not found:
+    print("Nothing found!")
+
+# --------------------------------------------------------
+
+needle = float(input("Enter a value to search: "))
+indexPosition = -1
+for i in range(ELEMENTS):
+    if haystack[i] == needle:
+        indexPosition = i
+        break
+
+if indexPosition == -1:
+    print("Nothing found!")
+else:
+    print(needle,"found at position", indexPosition)
+
+# --------------------------------------------------------
+
+needle = float(input("Enter a value to search: "))
+
+found = False
+i = 0
+while i < ELEMENTS and not found:
+    if haystack[i] == needle:
+        found = True
+        indexPosition = i
+    i += 1
+if not found:
+    print("Nothing found!")
+else:
+    print(needle, "found at position", indexPosition)
+
+# --------------------------------------------------------
+
+needle = float(input("Enter a value to search: "))
+
+i = 0
+while i < ELEMENTS - 1 and haystack[i] != needle:
+    i += 1
+
+if haystack[i] != needle:
+    print("Nothing found!")
+else:
+    print(needle, "found at position: ", i) 
+    """
+
+# SEARCHING FOR SOCIAL SECURITY NUMBER
+""" 
+PEOPLE = 3
+
+SSNs = [None] * PEOPLE
+firstNames = [None] * PEOPLE
+lastNames = [None] * PEOPLE
+for i in range(PEOPLE):
+    SSNs[i] = input("Enter SSN:")
+    firstNames[i] = input("Enter first name: ")
+    lastNames[i] = input("Enter last name: ")
+
+needle = input("Enter an SSN to seatch: ")
+
+#search for user-provided value in list SSNs
+i = 0
+while i < PEOPLE - 1 and SSNs[i] != needle:
+    i += 1
+
+if SSNs[i] != needle:
+    print("Nothing found!")
+else:
+    print(firstNames[i], lastNames[i]) 
+    
+    """
+
+""" 
+CITIES = 10
+PEOPLE = 30
+phoneNum = [[None] * PEOPLE for i in range(CITIES)]
+answer = [[None] * PEOPLE for i in range(CITIES)]
+for i in range(CITIES):
+    print("City No", i + 1)
+    for j in range(PEOPLE):
+        phoneNum[i][j] = input("Enter phone num for citizen No" + str (j + 1) + ":")
+        answer[i][j] = input("Enter answer of citizen No" + str(j + 1) + ":").upper()
+        while answer[i][j] not in ["Y","N","S"]:
+            answer[i][j] = input("Wrong answer. Enter a valid one:").upper()
+
+needle = input("Enter a phone number to search: ")
+
+found = False
+for i in range(CITIES):
+    for j in range(PEOPLE):
+        if phoneNum[i][j] == needle:
+            found = True
+            positionI = i #keep row index where needle was found
+            positionJ = j #keep column index where needle was found
+            break 
+    if found:
+        break
+
+if not found:
+    print("Phone number not found!")
+else:
+    print("Phone number", phoneNum[positionI][positionJ],"gave ", end = "")
+
+    if answer[positionI][positionJ] == "Y":
+        print("Yes", end="")
+    elif answer[positionI][positionJ] == "N":
+        print("No", end = "")
+    else:
+        print("Sometimes", end = "")
+
+    print(" as an aswer")
+
+ """
+""" 
+ROWS = 20
+COLUMNS = 30
+haystack = [[None] * COLUMNS for i in range(ROWS)]
+for i in range(ROWS):
+    for j in range(COLUMNS):
+        haystack[i][j] = float(input())
+
+needle = float(input("Enter a value to search: "))
+
+count = 0
+for j in range(COLUMNS):
+    found = False
+    for i in range(ROWS):
+        if haystack[i][j] == needle:
+            found = True
+            break
+    if found:
+        count+= 1
+    else:
+        break
+
+if count==COLUMNS:
+    print(needle,"found in every column!")
+ """
+
+# ------------------  BINARY SEARCH ALGORITHM -----------------------
+""" 
+left = 0
+right = ELEMENTS - 1
+found = False
+while left <= right and not found:
+    middle = (left + right) // 2
+
+    if needle < haystack[middle]:
+        right = middle - 1
+    elif needle > haystack[middle]:
+        left = middle + 1
+    else:
+        found = True
+
+if not found:
+    print("nothing found")
+else:
+    print(needle, "found at pos", middle) 
+    """
+""" 
+COUNTRIES = 10
+EVENTS = 20
+countryNames = [None] * COUNTRIES
+eventDescription = [[None] * COUNTRIES for i in range(EVENTS)]
+for j in range(COUNTRIES):
+    countryNames[j] = input("Enter country No" + str(j+1)+":")
+    for i in range(EVENTS):
+        eventDescription[i][j] = input("Enter description for event No" + str(i + 1)+":")
+
+needle = input("Enter a country to search: ").upper()
+#country names are entered in alphabetical order
+#use the binary search algo to search for "Needle"
+left = 0
+right = EVENTS - 1
+found = False
+while left <= right and not found:
+    middle = (left + right) // 2
+
+    if needle < countryNames[middle].upper():
+        right = middle - 1
+    elif needle > countryNames[middle].upper():
+        left = middle + 1
+    else:
+        found = True
+
+if not found:
+    print("No country found")
+else:
+    for i in range(EVENTS):
+        print(eventDescription[i][middle]) 
+        
+        """
 
